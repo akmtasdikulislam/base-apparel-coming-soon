@@ -134,6 +134,10 @@
      transition      : all .3s ease-in-out;
  }
 
+ main .email-subscription button img {
+     width: .85vw;
+ }
+
  aside {
      height: max-content;
      width : max-content;
@@ -143,6 +147,10 @@
      width: 42.35vw;
  }
 
+ #hero-mobile {
+     display: none;
+ }
+
  .attribution {
      font-size : .9em;
      text-align: center;
@@ -150,4 +158,81 @@
 
  .attribution a {
      color: hsl(228, 45%, 44%);
+ }
+
+ @media (max-width:375px) {
+     body {
+         position: relative;
+     }
+
+     main header {
+         left    : 8.5vw;
+         position: absolute;
+         top     : 8.25vw;
+     }
+
+     main header img {
+         width: 27vw;
+     }
+
+     main section {
+         left    : 18vw;
+         position: absolute;
+         top     : 96.5vw;
+     }
+
+     main section h1 {
+         font-size     : 10vw;
+         letter-spacing: 3.4vw;
+         line-height   : 11.5vw;
+         text-align    : center;
+         width         : min-content;
+     }
+
+     main section h1~p {
+         font-size  : 3.6vw;
+         left       : -7.9vw;
+         line-height: 5.8vw;
+         position   : relative;
+         text-align : center;
+         top        : 2.7vw;
+         width      : 80vw;
+     }
+
+     main .email-subscription #email {
+         position     : relative;
+         border-radius: 10vw;
+         font-size    : 3.75vw;
+         height       : 13vw;
+         left         : -9.5vw;
+         padding-left : 6vw;
+         top          : 8.8vw;
+         width        : 75vw;
+     }
+
+     main .email-subscription button {
+         border-radius: 10vw;
+         height       : 13vw;
+         left         : 56.5vw;
+         position     : relative;
+         top          : -4.5vw;
+         width        : 17vw;
+     }
+
+     main .email-subscription button img {
+         width: 3.5vw;
+     }
+
+     aside #hero-desktop {
+         display: none;
+     }
+
+     aside #hero-mobile {
+         display : block;
+         height  : auto;
+         left    : 0;
+         position: absolute;
+         top     : 22.5vw;
+         width   : 100vw;
+     }
  }
