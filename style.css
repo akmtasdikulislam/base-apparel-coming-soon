@@ -5,8 +5,8 @@
      /* Neutral Colours */
      --dark-grayish-red: hsl(0, 6%, 24%);
      /* Gradients */
-     --gradient1       : Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
-     --gradient2       : Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+     --gradient1       : 135deg, hsl(0, 0%, 100%) 0%, to hsl(0, 100%, 98%) 100%;
+     --gradient2       : 135deg, hsl(0, 80%, 86%) 0%, to hsl(0, 74%, 74%) 100%;
 
      /* Base font-size */
      font-size: 16px;
@@ -22,9 +22,125 @@
  }
 
  body {
-     font-family: "Josefin Sans", sans-serif;
-     min-height : 100vh;
-     min-width  : 100vw;
+     display        : flex;
+     flex-direction : row;
+     font-family    : "Josefin Sans", sans-serif;
+     justify-content: space-between;
+     min-height     : 100vh;
+     min-width      : 100vw;
+     overflow       : hidden;
+ }
+
+ main {
+     padding: 4.5vw 11.45vw;
+     width  : calc(100vw - 42.35vw);
+ }
+
+ main h1 {
+     color         : var(--desaturated-red);
+     font-size     : 4.5vw;
+     font-weight   : 300;
+     letter-spacing: 1.15vw;
+     line-height   : 4.8vw;
+     margin-top    : 9vw;
+     text-transform: uppercase;
+     width         : 10vw;
+ }
+
+ main h1 span {
+     color      : var(--dark-grayish-red);
+     font-weight: 500;
+ }
+
+ main p {
+     color         : var(--desaturated-red);
+     font-size     : 1vw;
+     letter-spacing: .055vw;
+     line-height   : 1.9vw;
+     margin-top    : 1.425vw;
+     width         : 30vw;
+ }
+
+ main .email-subscription {
+     margin-top: 2.75vw;
+     position  : relative;
+ }
+
+ main .email-subscription #email {
+     border        : 1px solid var(--desaturated-red);
+     border-radius : 5vw;
+     color         : var(--dark-grayish-red);
+     font-family   : "Josefin Sans", sans-serif;
+     font-size     : 1vw;
+     height        : 3.25vw;
+     letter-spacing: .06vw;
+     outline       : 0;
+     padding       : 2vw 2.2vw;
+     padding-bottom: 1.8vw;
+     width         : 28vw;
+ }
+
+ main .email-subscription #email::placeholder {
+     color: var(--desaturated-red);
+ }
+
+ main .email-subscription #email.error {
+     border: 2px solid var(--soft-red);
+ }
+
+ main .email-subscription #email.error~#error-icon,
+ main .email-subscription #email.error~#error-message {
+     display: block;
+ }
+
+ main .email-subscription #error-icon {
+     display  : none;
+     position : absolute;
+     right    : 11.875vw;
+     top      : 54%;
+     transform: translateY(-54%);
+     width    : 1.725vw;
+     z-index  : 2;
+ }
+
+ main .email-subscription #error-message {
+     bottom        : -2vw;
+     color         : var(--soft-red);
+     display       : none;
+     font-size     : .95vw;
+     left          : 2.25vw;
+     letter-spacing: 0.0001vw;
+     position      : absolute;
+ }
+
+ main .email-subscription button {
+     align-items     : center;
+     background-image: linear-gradient(135deg, hsl(0, 80%, 86%) 0%, hsl(0, 74%, 74%) 100%);
+     border          : 0;
+     border-radius   : 5vw;
+     box-shadow      : 0 14px 28px hsla(0, 74%, 74%, 0.22), 0 10px 10px hsla(0, 74%, 74%, 0.22);
+     display         : flex;
+     height          : 4vw;
+     justify-content : center;
+     position        : absolute;
+     right           : 3.77vw;
+     top             : 0;
+     width           : 7vw;
+ }
+
+ main .email-subscription button:hover {
+     background-image: linear-gradient(135deg, hsl(0, 80%, 95%) 0%, hsl(0, 74%, 85%) 100%);
+     cursor          : pointer;
+     transition      : all .3s ease-in-out;
+ }
+
+ aside {
+     height: max-content;
+     width : max-content;
+ }
+
+ aside img {
+     width: 42.35vw;
  }
 
  .attribution {
