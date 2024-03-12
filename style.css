@@ -32,8 +32,11 @@
  }
 
  main {
-     padding: 4.5vw 11.45vw;
-     width  : calc(100vw - 42.35vw);
+     background-image : url(./images/bg-pattern-desktop.svg);
+     background-repeat: no-repeat;
+     background-size  : cover;
+     padding          : 4.5vw 11.45vw;
+     width            : calc(100vw - 42.35vw);
  }
 
  main h1 {
@@ -163,6 +166,10 @@
  @media (max-width:375px) {
      body {
          position: relative;
+     }
+
+     main {
+         background: 0;
      }
 
      main header {
