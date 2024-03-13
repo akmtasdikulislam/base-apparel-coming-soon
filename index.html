@@ -38,7 +38,9 @@
           <input type="email" placeholder="Email Address" id="email" />
           <img src="./images/icon-error.svg" alt="" id="error-icon" />
           <p id="error-message">Please provide a valid email</p>
-          <button><img src="./images/icon-arrow.svg" alt="" /></button>
+          <button id="submit-button">
+            <img src="./images/icon-arrow.svg" alt="" />
+          </button>
         </div>
       </section>
     </main>
@@ -47,5 +49,24 @@
       <img src="./images/hero-desktop.jpg" alt="" id="hero-desktop" />
       <img src="./images/hero-mobile.jpg" alt="" id="hero-mobile" />
     </aside>
+    <script>
+      // Elements (Input field and button)
+      const emailInputField = document.getElementById("email");
+      const submitButton = document.getElementById("submit-button");
+      // Email validation Regular Expression
+      const emailValidationRegExp =
+        /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+      // Adding CLICK event-handler on submit-button
+      submitButton.addEventListener("click", () => {
+        // Initially, if the email input field contains "error" class, then removing it
+        if (emailInputField.classList.contains("error")) {
+          emailInputField.classList.remove("error");
+        }
+        // After then, if input email does not match the standard Regular Expression, then add "error" class to it.
+        if (emailValidationRegExp.test(emailInputField.value) == false) {
+          emailInputField.classList.add("error");
+        }
+      });
+    </script>
   </body>
 </html>

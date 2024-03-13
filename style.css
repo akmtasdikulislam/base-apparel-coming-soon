@@ -207,14 +207,28 @@
      }
 
      main .email-subscription #email {
-         position     : relative;
          border-radius: 10vw;
          font-size    : 3.75vw;
          height       : 13vw;
          left         : -9.5vw;
          padding-left : 6vw;
+         position     : relative;
          top          : 8.8vw;
          width        : 75vw;
+     }
+
+     main .email-subscription #error-icon {
+         right    : 25vw;
+         top      : 61.5%;
+         transform: translateY(-61.5%);
+         width    : 7vw;
+     }
+
+     main .email-subscription #error-message {
+         bottom     : -.25vw;
+         font-size  : 3.5vw;
+         margin-left: -4vw;
+         width      : max-content;
      }
 
      main .email-subscription button {
